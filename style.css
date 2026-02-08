@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(135deg, #6b8cff, #ff7eb3);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh; margin: 0; display: flex; justify-content: center; align-items: center; overflow: hidden;
+}
+.page { display: none; width: 100%; height: 100%; justify-content: center; align-items: center; }
+.page.active { display: flex; }
+.modal {
+    background-color: #f1f8f5; padding: 40px; border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2); text-align: center; width: 90%; max-width: 450px;
+}
+
+/* Page 1 */
+.header-box { background-color: #ffb7b2; padding: 20px; border-radius: 20px; margin-bottom: 30px; }
+.btn-pink { background-color: #ff9aa2; border: none; padding: 15px 30px; border-radius: 15px; cursor: pointer; font-weight: bold; }
+
+/* Page 5 Pricing & Button */
+.premium-title { font-size: 24px; margin-bottom: 20px; color: #111; }
+.pricing-container { display: flex; gap: 10px; justify-content: center; margin-bottom: 25px; }
+.tier { padding: 15px; border-radius: 15px; color: white; width: 125px; display: flex; flex-direction: column; }
+.black { background-color: #000; }
+.grey { background-color: #a6a6a6; }
+.price { font-size: 20px; font-weight: bold; }
+.period { font-size: 11px; font-weight: normal; }
+
+.btn-yes-premium {
+    background-color: #ff9d8d;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 157, 141, 0.4);
+}
+.btn-yes-premium:hover { background-color: #ff7b6b; transform: scale(1.02); }
+.best-value-tag { color: #ff7b6b; font-size: 11px; font-weight: bold; display: block; margin-top: 8px; }
+
+/* Features List */
+.features { text-align: left; list-style: none; padding: 0; margin-bottom: 25px; font-size: 14px; }
+.features li { margin-bottom: 8px; }
+.features li::before { content: "✔ "; color: #ff7eb3; font-weight: bold; }
+
+/* General Styles */
+.warning-box { background-color: #fffde7; border: 2px dashed #fbc02d; padding: 10px; margin: 15px 0; border-radius: 10px; font-size: 13px; font-weight: bold; }
+.checkbox-container { text-align: left; font-size: 12px; margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; display: flex; gap: 10px; border: 1px solid #ddd; }
+.btn-checkout { width: 100%; padding: 15px; border-radius: 12px; border: none; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 16px; }
+.btn-checkout.disabled { background-color: #ccc; pointer-events: none; color: #777; }
+.btn-checkout.enabled { background-color: #4caf50; color: white; pointer-events: all; }
+
+/* Inputs & Loading */
+.input-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.input-group input { padding: 15px; border-radius: 10px; border: 2px solid #ddd; font-size: 16px; outline: none; }
+.loader { border: 5px solid #f3f3f3; border-top: 5px solid #ff7eb3; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.loading-bar { width: 100%; height: 10px; background: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px; }
+.loading-progress { width: 0%; height: 100%; background: #ff7eb3; animation: loadBar 5s linear forwards; }
+@keyframes loadBar { from { width: 0%; } to { width: 100%; } }
+
+/* Receipt */
+.receipt { font-family: 'Courier New', monospace; text-align: left; background: white; padding: 20px; border: 1px dashed #bbb; margin-bottom: 20px; }
+.item { display: flex; justify-content: space-between; margin: 8px 0; font-size: 14px; }
+.barcode { text-align: center; font-size: 24px; letter-spacing: -1px; margin-top: 15px; }

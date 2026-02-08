@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="page1" class="page active">
+        <div class="modal">
+            <div class="header-box">
+                <h1>Will you be my Valentine?</h1>
+            </div>
+            <div class="buttons">
+                <button class="btn-pink" onclick="goToPage('page2')">Yes, ofc</button>
+                <button class="btn-pink" onclick="goToPage('page5')">No, sorry</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="page5" class="page">
+        <div class="modal">
+            <h1 class="premium-title">Try Valentine Plus Today!</h1>
+            <ul class="features">
+                <li>Priority Replies: No more "Left on Read."</li>
+                <li>Unlimited DLC: Free public hand-holding.</li>
+                <li>Snacks: I actually pick where we eat.</li>
+                <li>Hoodie Pass: Full access to my wardrobe.</li>
+                <li>Love Hotline: 24/7 online & support.</li>
+            </ul>
+            <div class="pricing-container">
+                <div class="tier black">
+                    <span class="price">$999</span>
+                    <span class="period">/per month</span>
+                </div>
+                <div class="tier grey">
+                    <span class="price">$99</span>
+                    <span class="period">/weekly</span>
+                </div>
+            </div>
+            <div class="selection-area">
+                <p class="or-text">Or just say yes</p>
+                <button class="btn-yes-premium" onclick="goToPage('page2')">
+                    YES (Choose free plan)
+                </button>
+                <span class="best-value-tag">MOST POPULAR • $0.00 (5 stars rating)</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="page2" class="page">
+        <div class="modal">
+            <h1 class="serif-font">LIFETIME FREE OPTION</h1>
+            <p class="subtext">The most perfect plan ever exsit<br>Save $11,988/year by choosing this plan!<br> Don't miss out !!</p>
+            <div class="warning-box">
+                <span class="warning-icon">!</span>
+                <p>Warning: Selecting "Yes" may result in excessive happiness and free cuddle.</p>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="termsCheck" onchange="toggleCheckout()">
+                <label for="termsCheck">I agree to the <span class="highlight">Terms of Service</span> (mandatory holding hand/ hugging and listening to my yapping).</label>
+            </div>
+            <button id="checkoutBtn" class="btn-checkout disabled" onclick="goToPage('signupPage')">PROCEED TO CHECKOUT ($0.00)</button>
+        </div>
+    </div>
+
+    <div id="signupPage" class="page">
+        <div class="modal">
+            <h2 class="serif-font">User Registration</h2>
+            <p class="subtext">Please enter your name to finalize your free plan.</p>
+            <div class="input-group">
+                <input type="text" id="userName" placeholder="Type your name here..." required>
+            </div>
+            <button class="btn-checkout enabled" onclick="saveUserAndLoad()">ACTIVATE PLAN</button>
+        </div>
+    </div>
+
+    <div id="page3" class="page">
+        <div class="modal">
+            <div class="loader"></div>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+            <p id="loading-text" class="loading-text">Loading...</p>
+        </div>
+    </div>
+
+    <div id="page4" class="page">
+        <div class="modal">
+            <div class="receipt">
+                <h2>🧾 PURCHASE RECEIPT</h2>
+                <p class="date" id="currentDate"></p>
+                <hr>
+                <div class="item"><span>Customer:</span><span id="receiptName">---</span></div>
+                <div class="item"><span>Plan:</span><span>Lifetime Valentine</span></div>
+                <div class="item"><span>Status:</span><span>Paid ($0.00)</span></div>
+                <hr>
+                <p class="barcode">||||||||||||||||||||||||||||||</p>
+            </div>
+            <h2 class="console-text">System Update: <span class="pink-text">"Single.exe"</span> deleted.</h2>
+            <button class="btn-pink" onclick="location.reload()">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+               
