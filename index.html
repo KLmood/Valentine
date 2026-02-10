@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will you be my Valentine?</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
@@ -95,15 +97,69 @@
                 <div class="item"><span>Plan:</span><span>Lifetime Valentine</span></div>
                 <div class="item"><span>Status:</span><span>Paid ($0.00)</span></div>
                 <hr>
-                <p class="barcode">||||||||||||||||||||||||||||||</p>
+                <p class="barcode">|||||||||||||||||||||||||||</p>
             </div>
             <h2 class="console-text">System Update: <span class="pink-text">"Single.exe"</span> deleted.</h2>
-            <button class="btn-pink" style="width:100%; max-width:none;" onclick="location.reload()">Restart</button>
+            <button class="btn-pink" style="width:100%;" onclick="goToPage('receiptSessionPage')">View Detailed Receipt</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="receiptSessionPage" class="page">
+        <div class="session-container">
+            <div class="receipt-paper" id="finalReceiptImg">
+                <h1 class="receipt-pink-title">PURCHASE RECEIPT</h1>
+                <p class="receipt-sub">VALENTINE</p>
+
+                <p class="receipt-address">
+                    123 To your <span class="pink">heart</span> St., U<br>
+                    and me City, I <span class="pink">Love</span> you
+                </p>
+
+                <p class="receipt-date" id="todayDate">Date (Today)</p>
+
+                <div class="dotted-divider"></div>
+
+                <p class="policy-text pink">
+                    Return Policy: No returns. You're<br>stuck with me now.
+                </p>
+
+                <div class="dotted-divider"></div>
+
+                <div class="receipt-row"><span>Tell jokes</span><span>0.00</span></div>
+                <div class="receipt-row"><span>Cuddles</span><span>0.00</span></div>
+                <div class="receipt-row"><span>Holding Hand</span><span>0.00</span></div>
+                <div class="receipt-row"><span>Playing guitar for you </span><span>0.00</span></div>
+
+                <div class="dotted-divider-short"></div>
+
+                <div class="receipt-total">
+                    <span>Total:</span>
+                    <span class="pink">Priceless</span>
+                </div>
+
+                <p class="receipt-footer">
+                    Total Savings: $11,988/year<br>
+                    Customer Satisfaction: Rated 5/5 stars<br> by the developer.
+                </p>
+
+                <div class="receipt-barcode">|||||||||||||||||||||||||</div>
+            </div>
+
+            <div class="social-session">
+                <button class="btn-save-red" onclick="downloadReceipt()">
+                    Save your LOVE receipt
+                </button>
+
+                <p class="social-msg">
+                    Send me your img to my soical media<br>or tag me <br> Follow on me social media 
+                </p>
+
+                <div class="social-links-row">
+                    <a href="https://www.facebook.com/mlkiko.u" target="_blank">FaceBook</a>
+                    <span>and</span>
+                    <a href="https://www.instagram.com/lime.flavourdrop/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div> </div> <script src="script.js"></script>
 </body>
 </html>
-            
-               
