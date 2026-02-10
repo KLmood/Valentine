@@ -121,5 +121,3 @@ function downloadReceipt() {
         link.click();
     });
 } // Fixed: Added this missing closing brace!
-
-
