@@ -1,5 +1,3 @@
-1. UNIFIED PAGE NAVIGATION
-// This handles loading, dates, and confetti all in one place
 function goToPage(pageId) {
     // Hide all pages
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -123,4 +121,5 @@ function downloadReceipt() {
         link.click();
     });
 } // Fixed: Added this missing closing brace!
+
 
